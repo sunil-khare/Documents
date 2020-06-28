@@ -1,0 +1,250 @@
+Livwize Smart Solution API Documents:
+
+NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format only.
+
+
+1. Sign Up : http://18.191.249.178:8080/signup 
+    Request JSON Format (Send to server):
+    {
+              name:<USER NAME>,
+              email:<EMAIL ID>,
+              password:<PASSWORD>,
+              phone:<MOBILE NO>
+    }
+    Response JSON Format :
+    if all ok then it will send success Msg
+    
+    NOTE : Athentication Token is Not Required for this URL
+    
+ 2. Login : http://18.191.249.178:8080/user/login
+    Request JSON Format :
+    {
+              email :<USER EMAIL>,
+              password:<PASSWORD>
+    }
+    Response JSON Format:
+     Data From Server (Accept From Server) : Receive user data in JSON Format, Please Parse data as you need, also receive TOKEN from server
+     Please handle Token Correctly that will required further URLs.
+     
+     NOTE: Athentication TOKEN is not required for this URL.
+     
+ 3. Get User: http://18.191.249.178:8080/user/getUser
+  
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+    
+    Request JSON Format :
+    {
+              email:<USER RESISTER EMAIL>,
+              phone:<RESISTER PHONE NO>
+    }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+   
+ 4. Update Profile Info : http://18.191.249.178:8080/user/updateProfile
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+               email:<EMAIL>,
+               phone:<USER PHONE>,
+               name:<USER NAME>,
+               address:<USER ADDRESS>
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+   
+  5. Update User Image : http://18.191.249.178:8080/user/updateImageName
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+      {Pass Form Data}
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+     
+  6. Change Password: http://18.191.249.178:8080/user/changePassword
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+              
+               phone:<USER PHONE>,
+               password:<NEW PASSWORD>
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+    
+ 7. Add Device by UserId : http://18.191.249.178:8080/device/addDevice
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {    
+          userId:<USER ID>,
+          deviceId:<DEVICE ID>,
+          deviceName:<DEVICE NAME>,
+          deviceType:<DEVICE TYPE> (In number 1 to 8),
+          deviceIP:<IP ADDRESS>,
+          deviceMAC:<MAC ADDRESS>,
+          deviceGroup:<DEVICE GROUP (Eg. Single,Dual, Four,Six)>,
+          isconfigured:<IS CONFIGURED>,
+          nodePosition:<NODE POSITION (1 to 6)>,
+          isAlarmSet:<IS ALARM SET (0 or 1)>,
+          isActive:<IS ACTIVE (0 or 1)>,
+          date:<CURRENT DATE>,
+          status:<STATUS>
+     }
+          
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+    
+ 8. Get Devices From All Under the User : http://18.191.249.178:8080/device/getDevicesByUser
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+              
+               userId:<USERId>,
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    Its is IMP to handle all devices present is user make different category for DUAL Node,FourNode and SIX Node
+    Diffenciat Device bye using there device Group and Node position.
+    
+    NOTE: Athentication TOKEN is required for this URL.
+    
+  9. Delete device by using DeviceId : http://18.191.249.178:8080/device/deleteDeviceByDeviceId
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+              
+               userId:<USERId>,
+               deviceId:<DEVICE ID>
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+    
+  10. Set Schedules: http://18.191.249.178:8080/schedule/addSchedule
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+            userId:<USER ID>,
+            deviceId:<DEVICEID>,
+            deviceName:<DEVICE NAME>,
+            deviceType:<DEVICE TYPE>,
+            time:<SCHEDULE TIME>,
+            everyday:<EVERYDAY OR ONCE FLAG>,
+            flag:<ON OR OFF FLAG>,
+            status:"active"
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+   
+11. Get Schedules: http://18.191.249.178:8080/schedule/getSchedule
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+            userId:<USER ID>
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+ 12. Update Schedules: http://18.191.249.178:8080/schedule/updateSchedule
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+           id:<SCHEDULE ID>,
+            deviceId:<DEVICE ID>,
+            time:<SCHEDULE NEW TIME>
+           
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+    
+  12. Delete Schedules: http://18.191.249.178:8080/schedule/deleteSchedule
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+           id:<SCHEDULE ID>    
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+    
+   13. Set HLW DATA : http://18.191.249.178:8080/device/setHlw
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+                userId:<USER ID>,
+                deviceId: <DEVICE ID>,
+                voltage: <VOLTAGE>,
+                current: <CURRENT>,
+                power: <POWER>,
+                powerConsumption: <POWER CONSUMTION>,
+                powerFactor: <POWER FACTOR>,
+                apperantPower: <APPERANT POWER>,  
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+ 
+ 14. Get HLW DATA : http://18.191.249.178:8080/device/getHlw
+    
+     NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
+     eg. { headers: { 'authorization': "Bearer " + token } }
+     
+     Request JSON Format :
+     {
+                deviceId: <DEVICE ID>
+     }
+    Response JSON Format:
+    if all ok then all user information come in JOSN format, Handle as you go...
+    
+    NOTE: Athentication TOKEN is required for this URL.
+ 
