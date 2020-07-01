@@ -3,7 +3,7 @@ Livwize Smart Solution API Documents:
 NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format only.
 
 
-1. Sign Up : http://18.191.249.178:8080/signup 
+1. Sign Up : http://api.livwize.in:8080/signup 
     Request JSON Format (Send to server):
     {
               name:<USER NAME>,
@@ -16,7 +16,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE : Athentication Token is Not Required for this URL
     
- 2. Login : http://18.191.249.178:8080/user/login
+ 2. Login : http://api.livwize.in:8080/user/login
     Request JSON Format :
     {
               email :<USER EMAIL>,
@@ -28,7 +28,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
      
      NOTE: Athentication TOKEN is not required for this URL.
      
- 3. Get User: http://18.191.249.178:8080/user/getUser
+ 3. Get User: http://api.livwize.in:8080/user/getUser
   
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -43,7 +43,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
    
- 4. Update Profile Info : http://18.191.249.178:8080/user/updateProfile
+ 4. Update Profile Info : http://api.livwize.in:8080/user/updateProfile
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -60,7 +60,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
    
-  5. Update User Image : http://18.191.249.178:8080/user/updateImageName
+  5. Update User Image : http://api.livwize.in:8080/user/updateImageName
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -72,7 +72,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
      
-  6. Change Password: http://18.191.249.178:8080/user/changePassword
+  6. Change Password: http://api.livwize.in:8080/user/changePassword
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -88,7 +88,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
     
- 7. Add Device by UserId : http://18.191.249.178:8080/device/addDevice
+ 7. Add Device by UserId : http://api.livwize.in:8080/device/addDevice
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -115,7 +115,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
     
- 8. Get Devices From All Under the User : http://18.191.249.178:8080/device/getDevicesByUser
+ 8. Get Devices From All Under the User : http://api.livwize.in:8080/device/getDevicesByUser
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -132,7 +132,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
     
-  9. Delete device by using DeviceId : http://18.191.249.178:8080/device/deleteDeviceByDeviceId
+  9. Delete device by using DeviceId : http://api.livwize.in:8080/device/deleteDeviceByDeviceId
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -148,7 +148,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
     
-  10. Set Schedules: http://18.191.249.178:8080/schedule/addSchedule
+  10. Set Schedules: http://api.livwize.in:8080/schedule/addSchedule
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -169,7 +169,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
    
-11. Get Schedules: http://18.191.249.178:8080/schedule/getSchedule
+11. Get Schedules: http://api.livwize.in:8080/schedule/getSchedule
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -182,7 +182,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     if all ok then all user information come in JOSN format, Handle as you go...
     
     NOTE: Athentication TOKEN is required for this URL.
- 12. Update Schedules: http://18.191.249.178:8080/schedule/updateSchedule
+ 12. Update Schedules: http://api.livwize.in:8080/schedule/updateSchedule
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -199,7 +199,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
     
-  12. Delete Schedules: http://18.191.249.178:8080/schedule/deleteSchedule
+  12. Delete Schedules: http://api.livwize.in:8080/schedule/deleteSchedule
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -213,7 +213,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
     
-   13. Set HLW DATA : http://18.191.249.178:8080/device/setHlw
+   13. Set HLW DATA : http://api.livwize.in:8080/device/setHlw
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
@@ -234,7 +234,7 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     
     NOTE: Athentication TOKEN is required for this URL.
  
- 14. Get HLW DATA : http://18.191.249.178:8080/device/getHlw
+ 14. Get HLW DATA : http://api.livwize.in:8080/device/getHlw
     
      NOTE* : Please Pass the Authentication header on the request Header Format : {"authorization": "Bearer "+<TOKEN>
      eg. { headers: { 'authorization': "Bearer " + token } }
