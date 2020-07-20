@@ -20,7 +20,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     Request JSON Format :
     {
               email :<USER EMAIL>,
-              password:<PASSWORD>
+              password:<PASSWORD>,
+              ajentId:<YOUR_AJENTID>,
+              key:<YOUR secrate Key>
     }
     Response JSON Format:
      Data From Server (Accept From Server) : Receive user data in JSON Format, Please Parse data as you need, also receive TOKEN from server
@@ -36,7 +38,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
     Request JSON Format :
     {
               email:<USER RESISTER EMAIL>,
-              phone:<RESISTER PHONE NO>
+              phone:<RESISTER PHONE NO>,
+              ajentId:<YOUR_AJENTID>,
+              key:<YOUR secrate Key>
     }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -53,7 +57,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
                email:<EMAIL>,
                phone:<USER PHONE>,
                name:<USER NAME>,
-               address:<USER ADDRESS>
+               address:<USER ADDRESS>,
+               ajentId:<YOUR_AJENTID>,
+               key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -81,7 +87,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
      {
               
                phone:<USER PHONE>,
-               password:<NEW PASSWORD>
+               password:<NEW PASSWORD>,
+               ajentId:<YOUR_AJENTID>,
+               key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -107,7 +115,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
           isAlarmSet:<IS ALARM SET (0 or 1)>,
           isActive:<IS ACTIVE (0 or 1)>,
           date:<CURRENT DATE>,
-          status:<STATUS>
+          status:<STATUS>,
+          ajentId:<YOUR_AJENTID>,
+          key:<YOUR secrate Key>
      }
           
     Response JSON Format:
@@ -124,6 +134,8 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
      {
               
                userId:<USERId>,
+               ajentId:<YOUR_AJENTID>,
+               key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -141,7 +153,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
      {
               
                userId:<USERId>,
-               deviceId:<DEVICE ID>
+               deviceId:<DEVICE ID>,
+               ajentId:<YOUR_AJENTID>,
+               key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -162,7 +176,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
             time:<SCHEDULE TIME>,
             everyday:<EVERYDAY OR ONCE FLAG>,
             flag:<ON OR OFF FLAG>,
-            status:"active"
+            status:"active",
+            ajentId:<YOUR_AJENTID>,
+            key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -176,7 +192,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
      
      Request JSON Format :
      {
-            userId:<USER ID>
+            userId:<USER ID>,
+            ajentId:<YOUR_AJENTID>,
+            key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -189,9 +207,11 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
      
      Request JSON Format :
      {
-           id:<SCHEDULE ID>,
+            id:<SCHEDULE ID>,
             deviceId:<DEVICE ID>,
-            time:<SCHEDULE NEW TIME>
+            time:<SCHEDULE NEW TIME>,
+            ajentId:<YOUR_AJENTID>,
+            key:<YOUR secrate Key>
            
      }
     Response JSON Format:
@@ -206,7 +226,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
      
      Request JSON Format :
      {
-           id:<SCHEDULE ID>    
+           id:<SCHEDULE ID>,
+           ajentId:<YOUR_AJENTID>,
+           key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -227,7 +249,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
                 power: <POWER>,
                 powerConsumption: <POWER CONSUMTION>,
                 powerFactor: <POWER FACTOR>,
-                apperantPower: <APPERANT POWER>,  
+                apperantPower: <APPERANT POWER>,
+                ajentId:<YOUR_AJENTID>,
+                key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
@@ -241,7 +265,9 @@ NOTE : All Below URLs accept only "POST" Methods and all data in "JSON" format o
      
      Request JSON Format :
      {
-                deviceId: <DEVICE ID>
+                deviceId: <DEVICE ID>,
+                ajentId:<YOUR_AJENTID>,
+                key:<YOUR secrate Key>
      }
     Response JSON Format:
     if all ok then all user information come in JOSN format, Handle as you go...
